@@ -1,4 +1,4 @@
-package fatiny.myTest.annotation;
+package fatiny.myTest.annotation.login;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

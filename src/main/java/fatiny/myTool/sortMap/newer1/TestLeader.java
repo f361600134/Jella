@@ -21,18 +21,17 @@ public class TestLeader {
 	@Test
 	public void put(){
 		long timestamp = System.currentTimeMillis();
-		Leaderboard<Long, ISorter<Long>> leaderboard = 
-				new Leaderboard<Long, ISorter<Long>>(new RankComparator(), Maps.newConcurrentMap());;
+		Leaderboard<Long, ISorter<Long>> leaderboard = new Leaderboard<Long, ISorter<Long>>(new RankComparator());;
 		leaderboard.setMaximum(5);
 		RankInfo rankInfo = null;
 		
 		long startTime = System.currentTimeMillis();
 		
-		for (int i = 1; i < 10 ; i++) {
-			rankInfo = new RankInfo((long)(i+1), "a"+i, i, timestamp+i); //+1
+		for (int i = 1; i <= 10 ; i++) {
+			rankInfo = new RankInfo((long)(i), "a"+i, i, timestamp+i); //+1
 			leaderboard.put(rankInfo.getPlayerId(), rankInfo);
 		}
-		System.out.println(leaderboard.size());
+		System.out.println(leaderboard);
 		System.out.println("时间消耗:"+ (System.currentTimeMillis() - startTime));
 	}
 	
@@ -136,7 +135,7 @@ public class TestLeader {
 		
 		long startTime = System.currentTimeMillis();
 		Collection<ISorter<Long>> result = leaderboard.subRankInfo(2, 20);
-		System.out.println("result:"+ result.size());
+		System.out.println("result:"+ result);
 		System.out.println("查询用时"+(System.currentTimeMillis() - startTime));
 	}
 	

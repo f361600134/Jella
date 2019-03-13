@@ -1,5 +1,6 @@
 package fatiny.myTool.rank.test.event;
 
+import com.google.common.eventbus.AllowConcurrentEvents;
 import com.google.common.eventbus.Subscribe;
 
 import fatiny.myTool.rank.test.RankInfo;

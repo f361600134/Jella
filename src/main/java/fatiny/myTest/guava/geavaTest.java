@@ -142,12 +142,17 @@ public class geavaTest {
 	}
 
 	public static void main(String[] args) {
-		Set<Short> set = Sets.newHashSet();
-		for (short i = 0; i < 100; i++) {
-			set.add(i);
-			set.remove(i - 1);
-		}
-		System.out.println(set.size());
+
+		// String txt = "D506CF6EC9EA400B968F703C20F6F1F0";
+		// String string = CharMatcher.digit().retainFrom(txt);
+		// System.out.println("从字符串中得到所有的数字:" + string);
+
+		// Set<Short> set = Sets.newHashSet();
+		// for (short i = 0; i < 100; i++) {
+		// set.add(i);
+		// set.remove(i - 1);
+		// }
+		// System.out.println(set.size());
 		// int notReallyInt = UnsignedInts.parseUnsignedInt("4294967295"); //
 		// Max unsigned int
 		// System.out.println(notReallyInt);

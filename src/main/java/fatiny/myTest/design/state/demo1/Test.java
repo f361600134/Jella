@@ -10,6 +10,7 @@ public class Test {
         //第一间房
         rooms[0].bookRoom();    //预订
         rooms[0].checkInRoom();   //入住
+        rooms[0].checkInRoom();   //入住
         rooms[0].bookRoom();    //预订
         System.out.println(rooms[0]);
         System.out.println("---------------------------");

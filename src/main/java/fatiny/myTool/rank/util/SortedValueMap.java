@@ -124,16 +124,16 @@ public class SortedValueMap<K,V> implements Map<K,V>{
 		 * 用sortedSet.remove会出现明明对象存在但删不了的情况
 		 * 所以改用该方法.
 		 */
-		sortedSet.remove(v);
-//		Iterator<V> it = sortedSet.iterator();
-//		V temp;
-//		while(it.hasNext()){
-//			temp = it.next();
-//			if(sortedSet.comparator().compare(v,temp) == 0){
-//				it.remove();
-//				break;
-//			}
-//		}
+//		sortedSet.remove(v);
+		Iterator<V> it = sortedSet.iterator();
+		V temp;
+		while(it.hasNext()){
+			temp = it.next();
+			if(sortedSet.comparator().compare(v,temp) == 0){
+				it.remove();
+				break;
+			}
+		}
 	}
 	
 	public void put2SortedSet(V v){

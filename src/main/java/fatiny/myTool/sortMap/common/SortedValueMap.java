@@ -200,9 +200,4 @@ public class SortedValueMap<K,V> implements Map<K,V>{
 		}
 		return result;
 	}
-
-	@Override
-	public String toString() {
-		return "SortedValueMap [map=" + map+"]";
-	}
 }

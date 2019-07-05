@@ -137,7 +137,11 @@ public class BitwiseTest {
 
 		c = a << 2; /* 240 = 1111 0000 */
 		System.out.println("a << 2 = " + c);
-
+		System.out.println(a+", a2binary:"+Integer.toBinaryString(a));	// 00111100
+		System.out.println(120+", a << 1:"+Integer.toBinaryString(120));// 01111000
+		System.out.println(c+", c2binary:"+Integer.toBinaryString(c));	// 11110000
+		System.out.println("====>"+Integer.valueOf(Integer.toBinaryString(c), 2)); //二进制转十进制
+		
 		c = a >> 2; /* 15 = 1111 */
 		System.out.println("a >> 2  = " + c);
 
@@ -147,6 +151,18 @@ public class BitwiseTest {
 		// for (int i = 0; i < 20; i++) {
 		// System.out.println(Integer.toBinaryString(i));
 		// }
+		System.out.println();
+		
+		System.out.println(3+"====>"+Integer.toBinaryString(3));	// 00111100
+		System.out.println("====>"+Integer.valueOf("00000010", 2)); //二进制转十进制
+		System.out.println(2+"===="+(00000011 ^ 2));// 01111000
+
+		System.out.println(a & ~((1<< 16)-1)); //a是否在65535范围内,在范围内0,不在则返回本身
+		
+		System.out.println(a & 1); //奇数偶数判断,末位是0表示偶数,1表示奇数
+		
+		
+		
 	}
 
 }

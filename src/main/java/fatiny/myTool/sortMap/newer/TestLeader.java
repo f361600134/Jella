@@ -63,8 +63,8 @@ public class TestLeader {
 		
 		long startTime = System.currentTimeMillis();
 		
-		for (int i = 1000000; i > 1 ; i--) {
-			rankInfo = new RankInfo((long)(i+1), "a"+i, i, timestamp+i); //+1
+		for (int i = 10; i > 1 ; i--) {
+			rankInfo = new RankInfo((long)(i+1), "a"+i, 1, timestamp); //+1
 			leaderboard.put(rankInfo.getPlayerId(), rankInfo);
 		}
 		System.out.println(leaderboard.size());

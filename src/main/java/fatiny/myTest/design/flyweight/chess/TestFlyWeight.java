@@ -24,6 +24,9 @@ public class TestFlyWeight {
 		
 		//System.out.println(factory.size());
 		System.out.println(chess1.getColor());
+		System.out.println(chess2.getColor());
+		System.out.println(chess3.getColor());
+		System.out.println(chess4.getColor());
 		System.out.println(ChessFlyWeightFactory.size());
 	}
 	

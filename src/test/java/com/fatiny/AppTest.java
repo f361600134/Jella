@@ -35,4 +35,20 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    public static void bubbleSort() {
+		int[] arr = { 12, 23, 34, 56, 56, 56, 78 };
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = 0; j < arr.length - i - 1; j++) {// -1为了防止溢出
+				if (arr[j] > arr[j + 1]) {
+					int temp = arr[j];
+
+					arr[j] = arr[j + 1];
+
+					arr[j + 1] = temp;
+				}
+			}
+		}
+	}
+
 }
